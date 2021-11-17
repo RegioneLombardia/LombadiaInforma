@@ -81,6 +81,9 @@ Queste configurazioni devono essere eseguite per ovviare ad alcune mancanze sull
     - **php yii migrate**
         - si richiede l'installazione del db
 
+- **Installare il database vuoto**
+  - **Importare nel proprio database SQL contenuto in: li_empty_db.sql.gz**
+
 - **Configurazione Piattaforma**
     - vi common/config/main-local.php
          ```
