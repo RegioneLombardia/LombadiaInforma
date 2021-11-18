@@ -20,6 +20,7 @@ description:
     documentation: 'https://www.open2.0.regione.lombardia.it'
     features:
       - content management system
+      - users privacy management
       - multichannel notification platform
       - profiled and personalised content platform	
       - newsletter
@@ -41,6 +42,7 @@ description:
       - integrare i sistemi deputati all'invio delle comunicazioni, implementando un'azione di armonizzazione e centralizzazione di dati provenienti da canali eterogenei;
       - creare strumenti integrati di comunicazione, quali landing page e sondaggi;
       - arricchire i contenuti con elementi multimediali (slideshow immagini, video) e documentali (allegati .pdf)
+      - gestione e profilazione utenze come da GDPR
     shortDescription: |-
       Servizio che consente di informare proattivamente gli utenti rispetto ai bisogni espressi
 developmentStatus: stable
@@ -70,9 +72,9 @@ logo: |-
   https://raw.githubusercontent.com/RegioneLombardia/LombardiaInforma/master/frontend/web/img/logo-li.png
 maintenance:
   contacts:
-    - name: Angelo Cardani
+    - name: Corrado Schiavoni
   type: community
-name: Lombardia Informa
+name: Preference Center
 platforms:
   - web
 releaseDate: '2021-11-15'
