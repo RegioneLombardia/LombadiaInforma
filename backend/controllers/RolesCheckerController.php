@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -17,7 +17,7 @@ use yii\web\Controller;
 class RolesCheckerController extends Controller
 {
 
-    public $layout = '@vendor/lispa/amos-core/views/layouts/main';
+    public $layout = '@vendor/open20/amos-core/views/layouts/main';
 
     public function actionIndex()
     {

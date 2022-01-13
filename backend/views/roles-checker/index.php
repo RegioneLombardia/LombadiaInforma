@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -44,7 +44,7 @@ $this->title = Yii::t('amosplatform', "Verifica i {numeroRuoli} di {appName}", [
     ?>
 
     <?=
-    \lispa\amos\core\helpers\Html::tag('div',
+    \open20\amos\core\helpers\Html::tag('div',
         \yii\grid\GridView::widget([
             'dataProvider' => new \yii\data\ArrayDataProvider([
                 'allModels' => $SubRoles,
@@ -73,7 +73,7 @@ $this->title = Yii::t('amosplatform', "Verifica i {numeroRuoli} di {appName}", [
     ?>
 
     <?=
-    \lispa\amos\core\helpers\Html::tag('div',
+    \open20\amos\core\helpers\Html::tag('div',
         \yii\grid\GridView::widget([
             'dataProvider' => new \yii\data\ArrayDataProvider([
                 'allModels' => $SubPermissions,
@@ -109,7 +109,7 @@ $this->title = Yii::t('amosplatform', "Verifica i {numeroRuoli} di {appName}", [
   ",
         'content' => $this->blocks['gridViewSubRoles'] .
             $this->blocks['gridViewSubPermissions'] .
-            \lispa\amos\core\helpers\Html::tag('div', '', [
+            \open20\amos\core\helpers\Html::tag('div', '', [
                 'class' => 'clearfix'
             ])
 

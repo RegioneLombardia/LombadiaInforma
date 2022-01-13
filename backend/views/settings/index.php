@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\admin\views\user-profile
+ * @package    open20\amos\admin\views\user-profile
  * @category   CategoryName
  */
 
-use lispa\amos\admin\AmosAdmin;
+use open20\amos\admin\AmosAdmin;
 use yii\bootstrap\Button;
-use lispa\amos\core\helpers\Html;
-use lispa\amos\core\icons\AmosIcons;
+use open20\amos\core\helpers\Html;
+use open20\amos\core\icons\AmosIcons;
 use backend\models\Settings;
 
 /**
@@ -125,7 +125,7 @@ $columns = [
 
             <hr>
             <?php
-            echo \lispa\amos\core\helpers\Html::a(\lispa\amos\core\icons\AmosIcons::show('refresh') . ' ' . AmosAdmin::t('amosplatform', 'Load From File'),
+            echo \open20\amos\core\helpers\Html::a(\open20\amos\core\icons\AmosIcons::show('refresh') . ' ' . AmosAdmin::t('amosplatform', 'Load From File'),
                 Yii::$app->urlManager->createUrl([
                     '/settings/load-from-file'
                 ]),
@@ -137,7 +137,7 @@ $columns = [
                 ]
             );
             echo '&nbsp;';
-            echo \lispa\amos\core\helpers\Html::a(\lispa\amos\core\icons\AmosIcons::show('check') . ' ' . AmosAdmin::t('amosplatform', 'Test Configurations'),
+            echo \open20\amos\core\helpers\Html::a(\open20\amos\core\icons\AmosIcons::show('check') . ' ' . AmosAdmin::t('amosplatform', 'Test Configurations'),
                 Yii::$app->urlManager->createUrl([
                     '/settings/config-test'
                 ]),

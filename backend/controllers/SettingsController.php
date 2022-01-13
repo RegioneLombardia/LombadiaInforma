@@ -1,23 +1,23 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\admin\controllers
+ * @package    open20\amos\admin\controllers
  * @category   CategoryName
  */
 
 namespace backend\controllers;
 
-use lispa\amos\admin\AmosAdmin;
+use open20\amos\admin\AmosAdmin;
 use backend\models\Settings;
-use lispa\amos\core\controllers\BaseController;
-use lispa\amos\core\controllers\CrudController;
-use lispa\amos\core\helpers\Html;
-use lispa\amos\core\icons\AmosIcons;
-use lispa\amos\dashboard\controllers\TabDashboardControllerTrait;
+use open20\amos\core\controllers\BaseController;
+use open20\amos\core\controllers\CrudController;
+use open20\amos\core\helpers\Html;
+use open20\amos\core\icons\AmosIcons;
+use open20\amos\dashboard\controllers\TabDashboardControllerTrait;
 use yii\web\Controller;
 use yii\db\ActiveQuery;
 use yii\filters\AccessControl;
@@ -29,11 +29,11 @@ use yii\web\Application;
 
 /**
  * Class DefaultController
- * @package lispa\amos\admin\controllers
+ * @package open20\amos\admin\controllers
  */
 class SettingsController extends Controller
 {
-    public $layout = '@vendor/lispa/amos-core/views/layouts/main';
+    public $layout = '@vendor/open20/amos-core/views/layouts/main';
 
     /**
      * Trait used for initialize the news dashboard

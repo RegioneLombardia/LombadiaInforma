@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
 $modules = [
     'amministra-utenti' => [
         'class' => 'mdm\admin\Module',
-        'layout' => "@vendor/lispa/amos-core/views/layouts/admin",
+        'layout' => "@vendor/open20/amos-core/views/layouts/admin",
         //'left-menu', // it can be '@path/to/your/layout'.
         'controllerMap' => [
             'assignment' => [
@@ -32,76 +32,97 @@ $modules = [
             ],
         ]
     ],
-    'chat' => [
-        'class' => 'lispa\amos\chat\AmosChat',
-    ],
+    /*  'chat' => [
+         'class' => 'open20\amos\chat\AmosChat',
+    ],*/
     'comments' => [
-       'class' => 'lispa\amos\comments\AmosComments',
-       'modelsEnabled' => [
-	   'lispa\amos\discussioni\models\DiscussioniTopic',
-           'lispa\amos\documenti\models\Documenti',
-           'lispa\amos\events\models\Event',
-           'lispa\amos\news\models\News',
-       ],
-	],
-    'comuni' => [
-        'class' => 'lispa\amos\comuni\AmosComuni',
+        'class' => 'open20\amos\comments\AmosComments',
+        'modelsEnabled' => [
+            'open20\amos\discussioni\models\DiscussioniTopic',
+            'open20\amos\documenti\models\Documenti',
+            'open20\amos\events\models\Event',
+            'open20\amos\news\models\News',
+        ],
+    ],
+
+    'design' => [
+        'class' => 'open20\design\Module',
     ],
 
     'dashboard' => [
-        'class' => 'lispa\amos\dashboard\AmosDashboard',
+        'class' => 'open20\amos\dashboard\AmosDashboard',
     ],
     'discussioni' => [
-        'class' => 'lispa\amos\discussioni\AmosDiscussioni',
+        'class' => 'open20\amos\discussioni\AmosDiscussioni',
     ],
-    'invitations' => [
-        'class' => 'lispa\amos\invitations\Module',
-    ],
+
     'layout' => [
-        'class' => 'lispa\amos\layout\Module',
+        'class' => 'open20\amos\layout\Module',
     ],
-    'myactivities' => [
-         'class' => 'lispa\amos\myactivities\AmosMyActivities',
-    ],
-    'news' => [
-        'class' => 'lispa\amos\news\AmosNews',
-    ],
+    'mobilebridge' => [ 'class' => 'open20\amos\mobile\bridge\Module' ],
+
+//    'myactivities' => [
+//        'class' => 'open20\amos\myactivities\AmosMyActivities',
+//    ],
     'privileges' => [
-	    'class' => 'lispa\amos\privileges\AmosPrivileges',
+        'class' => 'open20\amos\privileges\AmosPrivileges',
     ],
-    'project_management' => [
-        'class' => 'lispa\amos\projectmanagement\Module', 
-    ],
-    'report' => [
-        'class' => 'lispa\amos\report\AmosReport',
-        'modelsEnabled' => [
-            'lispa\amos\discussioni\models\DiscussioniTopic',
-            'lispa\amos\documenti\models\Documenti',
-            'lispa\amos\events\models\Event',
-            'lispa\amos\news\models\News',
-        ]
-    ],
-    'slideshow' => [
-        'class' => 'lispa\amos\slideshow\AmosSlideshow',
-    ],
-    'sondaggi' => [
-        'class' => 'lispa\amos\sondaggi\AmosSondaggi',
-    ],
+
     'tag' => [
-        'class' => 'lispa\amos\tag\AmosTag',
+        'class' => 'open20\amos\tag\AmosTag',
     ],
     'upload' => [
-        'class' => 'lispa\amos\upload\AmosUpload',
+        'class' => 'open20\amos\upload\AmosUpload',
     ],
     'utility' => [
-        'class' => 'lispa\amos\utility\Module'
+        'class' => 'open20\amos\utility\Module'
     ],
-    'videoconference' => [
-        'class' => 'lispa\amos\videoconference\AmosVideoconference'
+    'report' => [
+        'class' => 'open20\amos\report\AmosReport',
+        'modelsEnabled' => [
+            'open20\amos\discussioni\models\DiscussioniTopic',
+            'open20\amos\documenti\models\Documenti',
+            'open20\amos\events\models\Event',
+        ]
+    ],
+    'sitemanagement' => [
+        'class' => 'amos\sitemanagement\Module',
+        'enableUploadVideoSlider' => false,
+        'enableTextSlider' => false
     ],
     'workflow' => [
-       'class' => 'lispa\amos\workflow\AmosWorkflow',
-   ],
+        'class' => 'open20\amos\workflow\AmosWorkflow',
+    ],
+    'cmsbridge' => [
+        'class' => 'amos\cmsbridge\Module',
+    ],
+    'campains' => [
+        'class' => 'backend\modules\campains\Module',
+    ],
+    'statistics' => [
+        'class' => 'backend\modules\statistics\Module',
+    ],
+    'operators' => [
+        'class' => 'backend\modules\operators\Module',
+    ],
+    'registeredusers' => [
+        'class' => 'backend\modules\registeredusers\Module',
+    ],
+    'rbacviewer' => [
+        'class' => 'backend\modules\rbacviewer\AmosRbacViewer',
+    ],
+    'thematics' => [
+        'class' => 'backend\modules\thematics\Module',
+    ],
+    'organizationalunit' => [
+        'class' => 'open20\agid\organizationalunit\Module'
+    ],
+    'service' => [
+        'class' => 'open20\agid\service\Module'
+    ],
+    'person' => [
+        'class' => 'open20\agid\person\Module'
+    ],
 
 ];
 

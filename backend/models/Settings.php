@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
@@ -10,8 +10,8 @@
 
 namespace backend\models;
 
-use lispa\amos\admin\AmosAdmin;
-use lispa\amos\core\record\Record;
+use open20\amos\admin\AmosAdmin;
+use open20\amos\core\record\Record;
 use yii\db\ActiveRecord;
 
 /**

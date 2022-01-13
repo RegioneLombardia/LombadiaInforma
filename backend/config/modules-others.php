@@ -1,37 +1,17 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
 use kartik\datecontrol\Module;
 
 return [
-    'audit' => [
-        'class' => 'lispa\amos\audit\Audit',
-        'db' => 'db',
-        'accessRoles' => ['ADMIN'],
-        'ignoreActions' => [
-            'debug/*',
-            'ajax/*',
-            'audit/*',
-            'site/login',
-            'admin/user-profile/cambia-password',
-            'site/inserisci-dati-autenticazione',
-            'site/insert-auth-data',
-        ],
-        //This avoid all post data in audit
-        /*'panels' => [
-            'audit/request' => [
-                'ignoreKeys' => ['POST', 'requestBody'],
-            ],
-        ],*/
-    ],
     'datecontrol' => [
         'class' => 'kartik\datecontrol\Module',
         'displaySettings' => [
@@ -64,18 +44,6 @@ return [
             ]
         ]
     ],
-    'gridview' => [
-        'class' => '\kartik\grid\Module'
-    ],
-    'social' => [
-        // the module class
-        'class' => 'kartik\social\Module',
-        // the global settings for the google analytic plugin widget
-        'googleAnalytics' => [
-            'id' => 'UA-88133453-2',
-            'domain' => 'appdemoweb.org',
-        ],
-    ],
     'treemanager' => [
         'class' => '\kartik\tree\Module',
         // enter other module properties if needed
@@ -85,6 +53,18 @@ return [
     ],
     'workflow-manager' => [
         'class' => 'cornernote\workflow\manager\Module',
+    ],
+    'gridview' => [
+        'class' => '\kartik\grid\Module'
+    ],
+    'social' => [
+        // the module class
+        'class' => 'kartik\social\Module',
+        // the global settings for the google analytic plugin widget
+        'googleAnalytics' => [
+            'id' => '',
+            'domain' => '',
+        ],
     ],
     /****************DO NOT REMOVE****************/
 ];

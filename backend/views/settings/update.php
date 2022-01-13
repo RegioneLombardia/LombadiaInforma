@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\admin\views\user-profile
+ * @package    open20\amos\admin\views\user-profile
  * @category   CategoryName
  */
 
-use lispa\amos\admin\AmosAdmin;
+use open20\amos\admin\AmosAdmin;
 use yii\bootstrap\Button;
-use lispa\amos\core\helpers\Html;
-use lispa\amos\core\icons\AmosIcons;
+use open20\amos\core\helpers\Html;
+use open20\amos\core\icons\AmosIcons;
 use backend\models\Settings;
 use kartik\form\ActiveForm;
 
@@ -35,7 +35,7 @@ function actionsBar($model, $form)
     <div class="details_card">
         <div class="profile row nom">
             <div class="col-xs-12">
-                ' . \lispa\amos\core\helpers\Html::a(\lispa\amos\core\icons\AmosIcons::show('check') .
+                ' . \open20\amos\core\helpers\Html::a(\open20\amos\core\icons\AmosIcons::show('check') .
             ' ' .
             AmosAdmin::t('amosplatform', 'Add Value'),
             Yii::$app->urlManager->createUrl(['/settings/add-value', 'id' => $model->id]),
@@ -110,6 +110,6 @@ $form = ActiveForm::begin([
 
 echo getSubs($model, $form, $model->enabled);
 
-echo \lispa\amos\core\forms\CloseSaveButtonWidget::widget();
+echo \open20\amos\core\forms\CloseSaveButtonWidget::widget();
 
 ActiveForm::end(); ?>

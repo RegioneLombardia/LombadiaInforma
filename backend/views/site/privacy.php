@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
@@ -9,14 +9,14 @@
  * @category   CategoryName
  */
 
-use lispa\amos\core\helpers\Html;
+use open20\amos\core\helpers\Html;
 use yii\bootstrap\Modal;
 
 /**
  * @var yii\web\View $this
- * @var lispa\amos\core\forms\ActiveForm $form
- * @var lispa\amos\admin\models\UserProfile $model
- * @var lispa\amos\core\user\User $user
+ * @var open20\amos\core\forms\ActiveForm $form
+ * @var open20\amos\admin\models\UserProfile $model
+ * @var open20\amos\core\user\User $user
  */
 
 //check to avoid whole page having title 'Privacy Policy' when rendered in a modal

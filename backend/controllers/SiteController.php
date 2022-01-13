@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -15,7 +15,7 @@ use common\models\FirstAccessForm;
 use common\models\ForgotPasswordForm;
 use common\models\LoginForm;
 use common\models\User;
-use lispa\amos\admin\models\UserProfile;
+use open20\amos\admin\models\UserProfile;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -76,7 +76,7 @@ class SiteController extends Controller {
      * @inheritdoc
      */
     public function actions() {
-        $this->layout = '@vendor/lispa/amos-layout/src/views/layouts/main';
+        $this->layout = '@vendor/open20/amos-layout/src/views/layouts/main';
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
@@ -113,9 +113,9 @@ class SiteController extends Controller {
         Yii::$app->user->logout();
 
         if (\Yii::$app->params['template-amos']) {
-            $ids = \lispa\amos\dashboard\models\AmosUserDashboards::find()->andWhere(['user_id' => $userId])->select('id');
-            \lispa\amos\dashboard\models\AmosUserDashboardsWidgetMm::deleteAll(['IN', 'amos_user_dashboards_id', $ids]);
-            \lispa\amos\dashboard\models\AmosUserDashboards::deleteAll(['user_id' => $userId]);
+            $ids = \open20\amos\dashboard\models\AmosUserDashboards::find()->andWhere(['user_id' => $userId])->select('id');
+            \open20\amos\dashboard\models\AmosUserDashboardsWidgetMm::deleteAll(['IN', 'amos_user_dashboards_id', $ids]);
+            \open20\amos\dashboard\models\AmosUserDashboards::deleteAll(['user_id' => $userId]);
         }
 
         return $this->goHome();
@@ -140,8 +140,8 @@ class SiteController extends Controller {
             $mail = Yii::$app->mailer
                     ->compose(
                             [
-                        'html' => '@vendor/lispa/amos-admin/src/mail/user/credenziali-html',
-                        'text' => '@vendor/lispa/amos-admin/src/mail/user/credenziali-text'
+                        'html' => '@vendor/open20/amos-admin/src/mail/user/credenziali-html',
+                        'text' => '@vendor/open20/amos-admin/src/mail/user/credenziali-text'
                             ], [
                         'profile' => $model,
                     ])
@@ -202,7 +202,7 @@ class SiteController extends Controller {
      */
     public function actionInsertAuthData() {
 
-        $this->layout = '@vendor/lispa/amos-core/views/layouts/login';
+        $this->layout = '@vendor/open20/amos-core/views/layouts/login';
         $password_reset_token = null;
         $user = null;
         $username = null;
@@ -287,7 +287,7 @@ class SiteController extends Controller {
      * @return string|\yii\web\Response
      */
     public function actionForgotPassword() {
-        $this->layout = '@vendor/lispa/amos-core/views/layouts/login';
+        $this->layout = '@vendor/open20/amos-core/views/layouts/login';
 
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();

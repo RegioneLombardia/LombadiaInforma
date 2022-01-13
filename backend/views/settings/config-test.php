@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\admin\views\user-profile
+ * @package    open20\amos\admin\views\user-profile
  * @category   CategoryName
  */
 
-use lispa\amos\admin\AmosAdmin;
+use open20\amos\admin\AmosAdmin;
 use yii\bootstrap\Button;
-use lispa\amos\core\helpers\Html;
-use lispa\amos\core\icons\AmosIcons;
+use open20\amos\core\helpers\Html;
+use open20\amos\core\icons\AmosIcons;
 use backend\models\Settings;
 
 /**

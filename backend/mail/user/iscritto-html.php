@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -30,7 +30,7 @@ $this->title = Yii::t('amosplatform', 'Iscrizione alla piattaforma {appName}', [
                 </div>
                 <div class="sezione" style="overflow:hidden;color:#000000;">
                     <div class="testo">
-                        Carissimo iscritto al portale FITSTIC,
+ <?= Yii::t('amosplatform', 'Carissimo iscritto al portale {appName},', ['appName' => $appName]); ?>
                         <br/>  
                         per finalizzare l'iscrizione alle selezioni dei corsi  
                         <ul>
@@ -42,9 +42,7 @@ $this->title = Yii::t('amosplatform', 'Iscrizione alla piattaforma {appName}', [
                             <li><a href="/public/corso?id=<?= $corso ?>"><?= $Corso->titolo . ' - ' . $Corso->nome ?></a></li>
                             <?php }}} ?>
                         </ul>
-                        le inviamo in allegato i moduli da compilare, firmare e spedire a: 
-                        <br/>
-                        Fondazione Istituto Tecnico Superiore Tecnologie Industrie Creative - FITSTIC - Piazza C. Macrelli, 100 - 47521 Cesena (FC).
+                        le inviamo in allegato i moduli da compilare, firmare e spedire
                         <br/>
                         Alleghiamo anche l'avviso che spiega nel dettaglio il processo di selezione, che le consigliamo di leggere bene.
                         <br/>

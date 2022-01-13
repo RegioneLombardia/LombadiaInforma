@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -20,7 +20,7 @@ $appName = Yii::$app->name;
 ?>
 
 <?= "\n"; ?>
-<?= "Carissimo iscritto al portale FITSTIC,"; ?>
+<?= Yii::t('amosplatform', 'Carissimo iscritto al portale {appName}', ['appName' => $appName]); ?>
 <?= "\n"; ?>
 <?= "per finalizzare l'iscrizione alle selezioni dei corsi"; ?>
 <?php
@@ -38,8 +38,7 @@ if (!empty($corsi)) {
 }
 ?>
 <?= "\n"; ?>
-<?= "le inviamo in allegato i moduli da compilare, firmare e spedire a: 
-\nFondazione Istituto Tecnico Superiore Tecnologie Industrie Creative - FITSTIC - Piazza C. Macrelli, 100 - 47521 Cesena (FC)."; ?>
+<?= "le inviamo in allegato i moduli da compilare, firmare e spedire."; ?>
 <?= "\n"; ?>
 <?= "Alleghiamo anche l'avviso che spiega nel dettaglio il processo di selezione, che le consigliamo di leggere bene."; ?>
 <?= "\n"; ?>
@@ -52,7 +51,7 @@ if (!empty($corsi)) {
 <?= "\n"; ?>
 <?= "Congratulazioni!"; ?>
 <?= "\n"; ?>
-<?= "Ora sei iscritto al portale FITSTIC!"; ?>
+<?= Yii::t('amosplatform', 'Ora sei iscritto al portale {appName}', ['appName' => $appName]); ?>
 <?= "\n"; ?>
 <?= "Ecco i tuoi dati riepilogativi: "; ?>
 <?=

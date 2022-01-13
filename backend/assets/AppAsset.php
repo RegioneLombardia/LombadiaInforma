@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -34,9 +34,9 @@ class AppAsset extends AssetBundle
     {
         $moduleL = \Yii::$app->getModule('layout');
         if (!empty($moduleL)) {
-            $this->depends [] = 'lispa\amos\layout\assets\BaseAsset';
+            $this->depends [] = 'open20\amos\layout\assets\BaseAsset';
         } else {
-            $this->depends [] = 'lispa\amos\core\views\assets\AmosCoreAsset';
+            $this->depends [] = 'open20\amos\core\views\assets\AmosCoreAsset';
         }
         parent::init();
     }

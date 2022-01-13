@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -30,7 +30,7 @@ $this->title = Yii::t('amosplatform', 'Nuovo iscritto nella piattaforma {appName
                 </div>
                 <div class="sezione" style="overflow:hidden;color:#000000;">
                     <div class="testo">
-                    Un nuovo utente si &eacute; iscritto alla piattaforma FITSTIC!
+						<?= Yii::t('amosplatform', 'Un nuovo utente si &eacute; iscritto alla piattaforma {appName}!', ['appName' => $appName]); ?>
                     <br />                    
                     Ecco i dati riepilogativi del nuovo utente: 
                     <br />

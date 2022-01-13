@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
-use lispa\amos\core\forms\Tabs;
+use open20\amos\core\forms\Tabs;
 
 $this->title = 'Conferma Adesione';
 $this->params['breadcrumbs'][] = $this->title;
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="info-text">registrazione effettuata con successo</h1>
-                        <div class="info-text">Appena Forma.Temp avrà verificato le informazioni inserite con esito
+                        <div class="info-text">Appena avremo verificato le informazioni inserite con esito
                             positivo, sarà inviata una mail di avviso all'indirizzo che è stato indicato per il legale
                             rappresentante; la mail conterrà le informazioni necessarie per accedere alla piattaforma e
                             presentare l'atto unico di adesione e la domanda di ammissione al catalogo. Dopo aver
