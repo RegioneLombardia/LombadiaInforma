@@ -1,16 +1,17 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\email
+ * @package    open20\amos\email
  * @category   CategoryName
  */
 
 
-use lispa\amos\admin\models\UserProfile;
+use open20\amos\admin\models\UserProfile;
+$moduleNameAdmin = \open20\amos\admin\AmosAdmin::getModuleName();
 
 $appLink = Yii::$app->urlManager->createAbsoluteUrl(['/']);
 $appName = Yii::$app->name;
@@ -88,7 +89,7 @@ $appName = Yii::$app->name;
 
                 <?php if(!empty($token)) {?>
                     <p style="margin: 0px; text-align: center">
-                        <a href="<?= $appLink ?>admin/security/disable-notifications?token=<?=$token?>"
+                        <a href="<?= $appLink ?><?= $moduleNameAdmin ?>/security/disable-notifications?token=<?=$token?>"
                            title="<?= Yii::t('amosplatform', '#footer_disable_notification') ?>"
                            target="_blank"><?= Yii::t('amosplatform', '#footer_disable_notification') ?>
                         </a>
@@ -97,7 +98,7 @@ $appName = Yii::$app->name;
                 <?php if(!empty($profile)) {?>
                     <p>
                         <?= Yii::t('amosplatform', 'Gestisci la frequenza delle email ricevute e la tua presenza nella piattaforma, ') ?>
-                        <a href="<?= $appLink ?>admin/user-profile/update?id=<?= $profile->id?>&tabActive=tab-settings"
+                        <a href="<?= $appLink ?><?= $moduleNameAdmin ?>/user-profile/update?id=<?= $profile->id?>&tabActive=tab-settings"
                            title="<?= Yii::t('amosplatform', '#login_profile') ?>"
                            target="_blank"><?= Yii::t('amosplatform', '#login_profile') ?>
                         </a>

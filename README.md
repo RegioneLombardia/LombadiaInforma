@@ -1,6 +1,6 @@
 # Manuale di Installazione
 
-Open 2.0
+Preference Center
 ## Scopo
 La manualistica contenuta è puramente tecnica e per tanto **deve essere letta ed eseguita da personale esperto** onde evitare danni alla macchina che deve ospitare il software
 
@@ -10,9 +10,6 @@ La manualistica contenuta è puramente tecnica e per tanto **deve essere letta e
 - I valori scelti nelle configurazioni di **PHP** sono valori **Raccomandati**, sta alla discrezione del tecnico se sceglierne di differenti
 
 ## Prerequisiti
-- Abilitare la connessione a **internet** per il download dei pacchetti necessari
-    - export http_proxy=http://reglomb.proxy:8080
-    - export https_proxy=http://reglomb.proxy:8080
 - Verificare che la versione di **PHP** Rispetti I requisiti (7.0.x * nei sistemi operativi RedHat potrebbe essere necessario collegare repository non ufficiali. *)
     - php -v
 - Verificare che la versione di **Mysql** Rispetti I requisiti (5.7)
@@ -47,7 +44,7 @@ La manualistica contenuta è puramente tecnica e per tanto **deve essere letta e
 
 ## Pre-configurazioni Macchina
 Queste configurazioni devono essere eseguite per ovviare ad alcune mancanze sulla macchina fornitaci in modo da risolvere alcuni problemi che impedirebbero alla piattaforma di funzionare
-- Modifica **.htaccess** in **/opt/rh/httpd24/root/var/www/html/basic-template/backend/web**
+- Modifica **.htaccess** in **/www/html/<project>/backend/web**
     - RewriteEngine on
     - RewriteCond %{REQUEST_FILENAME} !-f
     - RewriteCond %{REQUEST_FILENAME} !-d

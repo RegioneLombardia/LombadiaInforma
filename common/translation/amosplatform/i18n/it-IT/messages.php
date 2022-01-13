@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\comments\i18n\it-IT
+ * @package    open20\amos\comments\i18n\it-IT
  * @category   CategoryName
  */
 
@@ -98,4 +98,8 @@ return [
     'Utenza non attiva' => 'Utenza non attiva',
     'Verifica i {numeroRuoli} di {appName}' => 'Verifica i {numeroRuoli} di {appName}',
     'Wrong password reset token.' => 'Password reset token errato.',
+    '#error_contact_helpdesk' => "Contatta l'assistenza",
+    'Pagina non trovata' => "Pagina non trovata",
+    'Accesso negato' => "Accesso negato",
+    'Si è verificato un errore interno' => "Si è verificato un errore interno",
 ];

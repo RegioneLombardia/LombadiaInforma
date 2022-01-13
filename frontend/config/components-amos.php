@@ -1,14 +1,17 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
 return [
-
+    'workflowSource' => [
+        'class' => 'open20\amos\core\workflow\ContentDefaultWorkflowDbSource',
+    ],
+    
 ];

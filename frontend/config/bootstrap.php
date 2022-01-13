@@ -5,7 +5,7 @@
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -14,7 +14,7 @@ $bootstrap = [];
 $bootstrap[] = 'translatemanager';
 
 $bootstrap[] = [
-    'class' => 'lispa\amos\core\components\LanguageSelector',
+    'class' => 'open20\amos\core\components\LanguageSelector',
     'supportedLanguages' => ['en-GB', 'it-IT'],
     'allowedIPs' => ['*']
 ];

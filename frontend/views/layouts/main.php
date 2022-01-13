@@ -1,91 +1,31 @@
 <?php
+use app\assets\ResourcesAsset;
+use app\components\CmsHelper;
+use app\modules\seo\frontend\behaviors\LuyaSeoBehavior;
+use open20\design\assets\BootstrapItaliaCustomAsset;
 
-/**
- * Lombardia Informatica S.p.A.
- * OPEN 2.0
- *
- *
- * @package    lispa\amos\basic\template
- * @category   CategoryName
- */
+$assetBundle = ResourcesAsset::register($this);
+$module = \Yii::$app->getModule('design');
 
-/* @var $this \yii\web\View */
-/* @var $content string */
+if ($module) {
 
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use frontend\assets\AppAsset;
-use common\widgets\Alert;
+    //$currentAsset = BootstrapItaliaCustomAsset::register($this);
 
-AppAsset::register($this);
-?>
-<?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-</head>
-<body>
-<?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'My Company',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+    $customBehavior = $this->attachBehavior('seo', LuyaSeoBehavior::className());
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</div>
+    $iconSubmenu = '<svg class="icon right"><use xlink:href="' . $currentAsset->$baseUrl . '/node_modules/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right"></use>';
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+    $cmsDefaultMenu = CmsHelper::BiHamburgerMenuRender(Yii::$app->menu->findAll(['depth' => 1, 'container' => 'default']),$iconSubmenu, 'cms-menu-container-default',false);
+    $cmsFooterMenu = CmsHelper::BiHamburgerMenuRender(Yii::$app->menu->findAll(['depth' => 1, 'container' => 'footer']),$iconSubmenu, 'cms-menu-container-footer',true);
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
-
-<?php $this->endBody() ?>
-</body>
-</html>
-<?php $this->endPage() ?>
+    echo $this->render(
+        '@vendor/open20/design/src/views/layouts/bi-main-layout',
+        [
+            'content' => $content,
+            'customBeavior' => $customBehavior,
+            'cmsDefaultMenu' => $cmsDefaultMenu,
+            'cmsFooterMenu' => $cmsFooterMenu,
+        ]
+    );
+}

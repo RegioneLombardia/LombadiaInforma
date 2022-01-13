@@ -5,7 +5,7 @@
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
@@ -42,24 +42,28 @@ $params = array_merge(
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 return [
     'id' => 'app-console',
+    'name' => 'Lombardia Informa',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'console\controllers',
     'controllerMap' => [
         'migrate' => [
-            'class' => 'lispa\amos\core\migration\MigrateController',
+            'class' => 'open20\amos\core\migration\MigrateController',
             'migrationLookup' => array_merge(
                 require(__DIR__ . '/migrations-amos.php'),
                 require(__DIR__ . '/migrations-others.php')
             ),
+            'migrationNamespaces' => [
+                'conquer\oauth2\migrations'
+            ]
         ],
         'language' => [
-            'class' => 'lispa\amos\core\commands\LanguageSourceController',
+            'class' => 'open20\amos\core\commands\LanguageSourceController',
         ],
         'userutility' => [
-            'class' => 'lispa\amos\admin\commands\UserUtilityController',
+            'class' => 'open20\amos\admin\commands\UserUtilityController',
         ],
         'utility' => [
-            'class' => 'lispa\amos\utility\commands\UtilityController',
+            'class' => 'open20\amos\utility\commands\UtilityController',
         ],
     ],
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

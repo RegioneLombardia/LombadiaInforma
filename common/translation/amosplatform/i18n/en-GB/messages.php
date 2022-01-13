@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Lombardia Informatica S.p.A.
+ * Aria S.p.A.
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\comments\i18n\en-GB
+ * @package    open20\amos\comments\i18n\en-GB
  * @category   CategoryName
  */
 
@@ -97,4 +97,9 @@ return [
     'Update' => 'Update',
     'Utenza non attiva' => 'User inactive',
     'Wrong password reset token.' => 'Wrong password reset token.',
+    '#error_contact_helpdesk' => "Contact help desk",
+    'Pagina non trovata' => "Page not found",
+    'Accesso negato' => "Access denied",
+    'Si è verificato un errore interno' => "An internal error occurred",
+
 ];

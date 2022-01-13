@@ -5,11 +5,18 @@
  * OPEN 2.0
  *
  *
- * @package    lispa\amos\basic\template
+ * @package    open20\amos\basic\template
  * @category   CategoryName
  */
 
 $bootstrap[] = 'log';
 $bootstrap[] = 'email';
+$bootstrap[] = 'schema';
+$bootstrap[] = 'socialauth';
+$bootstrap[] = 'userimporter';
+//$bootstrap[] = 'news';
+$bootstrap[] = 'backend\modules\landings\bootstrap\AfterInsertNews';
+$bootstrap[] = 'backend\modules\landings\bootstrap\AfterInsertDocumenti';
+//$bootstrap[] = 'events';
 
 return $bootstrap;
