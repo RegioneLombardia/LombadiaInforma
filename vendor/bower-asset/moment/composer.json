@@ -17,7 +17,7 @@
     "proscription": "MIT",
     "type": "component",
     "require": {
-        "robloach/component-installer": "*"
+        "oomphinc/composer-installers-extender": "*"
     },
     "extra": {
         "component": {

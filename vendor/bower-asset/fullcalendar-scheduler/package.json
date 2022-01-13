@@ -16,8 +16,8 @@
   "dependencies": {
     "fullcalendar": "~3.10.0"
   },
-  "version": "1.10.0",
-  "releaseDate": "2019-08-10",
+  "version": "1.10.1",
+  "releaseDate": "2020-05-18",
   "devDependencies": {
     "@types/jquery": "2.0.47",
     "awesome-typescript-loader": "^3.5.0",
@@ -59,7 +59,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "native-promise-only": "^0.8.1",
     "moment": "^2.20.1",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.14.1",
     "phantomjs-prebuilt": "^2.1.7",
     "sass-loader": "^6.0.7",
     "tslib": "^1.9.0",

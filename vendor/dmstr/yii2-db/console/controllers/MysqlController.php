@@ -194,7 +194,8 @@ class MysqlController extends Controller
         $pdo = new \PDO($this->_dsn, $this->_root, $this->_rootPassword);
         $pdo->exec(
             "CREATE DATABASE IF NOT EXISTS `{$this->_db}`;
-                 GRANT ALL ON `{$this->_db}`.* TO '{$this->_user}'@'%' IDENTIFIED BY '{$this->_pass}';
+                 CREATE USER IF NOT EXISTS '{$this->_user}'@'%' IDENTIFIED BY '{$this->_pass}';
+                 GRANT ALL ON `{$this->_db}`.* TO '{$this->_user}'@'%';
                  FLUSH PRIVILEGES;"
         );
 
@@ -334,11 +335,17 @@ class MysqlController extends Controller
         $command->addArg('-u', getenv('DB_ENV_MYSQL_USER'));
         $command->addArg('--password=', getenv('DB_ENV_MYSQL_PASSWORD'));
         $command->addArg('-D', getenv('DB_ENV_MYSQL_DATABASE'));
-        $command->addArg('< '.$file);
+        $command->addArg('<', null, false);
+        $command->addArg($file);
 
-        echo $command->getExecCommand();
+        $this->stdout('Running command:'.PHP_EOL);
+        $this->stdout($command->getExecCommand());
+        $this->stdout(PHP_EOL);
 
-        $command->execute();
+        if (!$command->execute()) {
+            $this->stderr($command->getError());
+            $this->stderr(PHP_EOL);
+        }
     }
 
     /**
