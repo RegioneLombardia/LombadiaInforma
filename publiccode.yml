@@ -62,7 +62,7 @@ it:
     codiceIPA: r_lombar
 landingURL: 'https://github.com/RegioneLombardia/LombardiaInforma'
 legal:
-  license: LGPL-3.0-or-later
+  license: GPL-3.0-only
 localisation:
   availableLanguages:
     - it
