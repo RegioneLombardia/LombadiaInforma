@@ -59,7 +59,9 @@ it:
     pagopa: false
     spid: true
   riuso:
-    codiceIPA: r_lombar
+    codiceIPA: 
+      - r_lombar
+      - r_toscan
 landingURL: 'https://github.com/RegioneLombardia/LombardiaInforma'
 legal:
   license: GPL-3.0-only
@@ -82,3 +84,4 @@ softwareType: standalone/web
 url: 'https://github.com/RegioneLombardia/LombardiaInforma'
 usedBy:
   - Regione Lombardia
+  - Regione Toscana
