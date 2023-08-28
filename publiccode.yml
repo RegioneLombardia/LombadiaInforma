@@ -61,7 +61,6 @@ it:
   riuso:
     codiceIPA: 
       - r_lombar
-      - r_toscan
 landingURL: 'https://github.com/RegioneLombardia/LombardiaInforma'
 legal:
   license: GPL-3.0-only
