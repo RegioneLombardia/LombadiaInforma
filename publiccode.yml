@@ -59,8 +59,7 @@ it:
     pagopa: false
     spid: true
   riuso:
-    codiceIPA: 
-      - r_lombar
+    codiceIPA: r_lombar
 landingURL: 'https://github.com/RegioneLombardia/LombardiaInforma'
 legal:
   license: GPL-3.0-only
